@@ -6,11 +6,11 @@
 
 
 
-INA219::INA219(i2c_inst_t* inst, int sda, int scl)
+INA219::INA219(/*i2c_inst_t* inst, int sda, int scl*/)
 {
-    this->inst = inst;
-    this->sda = sda;
-    this->scl = scl;
+    // this->inst = inst;
+    // this->sda = sda;
+    // this->scl = scl;
 
     // I2C Initialisation. Using it at 400 Khz.
     i2c_init(this->inst, 400*1000);

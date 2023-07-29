@@ -22,9 +22,9 @@
 class INA219
 {
     private:
-        i2c_inst_t* inst;
-        int sda;
-        int scl;
+        i2c_inst_t* inst = i2c0;
+        int sda = 8;
+        int scl = 9;
     
     public:
         
@@ -32,7 +32,7 @@ class INA219
 
         bool read_current(float *current);
 
-        INA219(i2c_inst_t* inst, int sda, int scl);
+        INA219(/*i2c_inst_t* inst, int sda, int scl*/);
         ~INA219();
 };
 
