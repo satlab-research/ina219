@@ -76,7 +76,7 @@ bool INA219::read_current(float *current)
     sleep_us(10);
     read_status = i2c_read_blocking(this->inst, INA_ADDR, rec, 2, false);
 
-    *current = (rec[0] << 8 | rec[1]) * CURRENT_LSB;
+    *current  = (rec[0] << 8 | rec[1]) * CURRENT_LSB;
 
     // printf("%d",write_status);
     // printf("%d",read_status);
